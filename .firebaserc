@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fir-emulator-practice"
+  },
+  "targets": {
+    "fir-emulator-practice": {
+      "hosting": {
+        "web-app": [
+          "nate-tap-test"
+        ]
+      }
+    }
+  }
+}

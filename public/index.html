@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/core.css" />
+
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="./js/global.js" defer></script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="header">
+        <p class="header__title">SPEED TEST</p>
+        <p class="header__subtitle">
+          Tap this button 30 times as quickly as you can
+        </p>
+      </div>
+      <div class="circles">
+        <img
+          id="circle-1"
+          class="circles--shape"
+          src="./img/rings/ring-shape.png"
+        />
+        <img
+          id="circle-2"
+          class="circles--fill-2"
+          src="./img/rings/ring-fill-2.png"
+        />
+        <img
+          id="circle-3"
+          class="circles--fill-1"
+          src="./img/rings/ring-fill-1.png"
+        />
+        <img
+          id="circle-4"
+          class="circles--tech-ring-1"
+          src="./img/rings/tech-ring-1.png"
+        />
+        <img id="off" class="button-off" src="./img/button-off.png" />
+        <img id="on" class="button-on" src="./img/button-on.png" />
+      </div>
+      <div class="info">
+        <button id="start" class="start-button__btn" href="#">
+          <span class="start-button__text">START</span
+          ><img class="start-button__icon" src="./img/icon/reactiontime.png" />
+        </button>
+        <div id="timer"></div>
+        <div id="timer__final"></div>
+      </div>
+      <div id="modal">
+        <p id="modal__title">YOUR TIME</p>
+        <div id="modal__score"></div>
+        <div id="modal__dots"></div>
+        <p id="modal__instructions">
+          Enter your initials below to save your results to the leaderboard
+        </p>
+        <form id="modal__form">
+          <input type="text" id="modal__form-input" />
+          <button type="submit" id="modal__form-button">
+            <span>SAVE SCORE</span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div id="results">
+      <p class="results__title">Top 10 Leaderboard</p>
+      <div class="results__icons">
+        <div><img src="./img/icon/podium.png" /></div>
+        <div><img src="./img/icon/users.png" /></div>
+        <div><img src="./img/icon/reactiontime-gray.png" /></div>
+      </div>
+      <div id="results__table"></div>
+      <button id="start-over" href="#">
+        <span class="start-over-button__text">Try Again</span>
+      </button>
+    </div>
+  </body>
+</html>
